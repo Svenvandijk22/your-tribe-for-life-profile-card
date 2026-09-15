@@ -14,12 +14,14 @@
 </article>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
 	.profile-card {
 		position: relative;
-        display: flex;
+		display: flex;
+		align-items: flex-start;
 
-		width: min(80vw, 500px);
+		width:  650px;
 		min-height: 600px;
 
 		padding: 2rem;
@@ -41,23 +43,42 @@
 			z-index: -1;
 		}
 
-        h1{
-         
-	font-family: "Archivo Black", sans-serif;
-	font-size: 4rem;
-	font-weight: 400;
-	line-height: 0.9;
-	text-transform: uppercase;
-}
+		h1 {
+			position: relative;
+			z-index: 2;
+			animation: kaartin 0.6s ease-out;
 
 
-        
+			margin-right: -3rem;
 
-        img{
+			font-family: "Archivo Black", sans-serif;
+			font-size: 4rem;
+			font-weight: 400;
+			line-height: 0.9;
+			text-transform: uppercase;
+		}
 
-            width: 340px;
-            height: 300px;
-            border-radius: 20px;
-        }
+	
+
+		img {
+			position: relative;
+			z-index: 1;
+
+			width: 340px;
+			height: 300px;
+
+			object-fit: cover;
+			border-radius: 20px;
+		}
 	}
+
+		@keyframes kaartin {
+	
+	from {opacity: 0;
+	transform: translateY(20px)}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}}
 </style>
