@@ -9,12 +9,13 @@
 		<div class="upper-card">
 			<h1>{person.name}</h1>
 
-			{#if person.mugshot}
-				<img
-					src={`https://fdnd.directus.app/assets/${person.mugshot}`}
-					alt={`Foto van ${person.name}`}
-				/>
-			{/if}
+		<img
+	src={`https://fdnd.directus.app/assets/${person.mugshot}?width=700`}
+	
+	width="563"
+	height="375"
+	fetchpriority="high"
+/>
 		</div>
 
 		<p class="bio">{person.bio}</p>
