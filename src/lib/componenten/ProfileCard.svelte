@@ -3,6 +3,8 @@
 </script>
 
 <article class="profile-card">
+
+	<div class="upper-card">
 	<h1>{person.name}</h1>
 
 	{#if person.mugshot}
@@ -11,6 +13,10 @@
 			alt={`Foto van ${person.name}`}
 		/>
 	{/if}
+	</div>
+
+	<p class="bio">{person.bio}</p>
+	<p></p>
 </article>
 
 <style>
@@ -18,7 +24,7 @@
 
 	.profile-card {
 		position: relative;
-		display: flex;
+		
 		align-items: flex-start;
 
 		width:  650px;
@@ -43,6 +49,11 @@
 			z-index: -1;
 		}
 
+		.upper-card{
+
+			display: flex;
+		}
+
 		h1 {
 			position: relative;
 			z-index: 2;
@@ -58,7 +69,8 @@
 			text-transform: uppercase;
 		}
 
-	
+
+
 
 		img {
 			position: relative;
